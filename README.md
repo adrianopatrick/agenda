@@ -17,4 +17,4 @@ projeto da disciplina de prog. web unifor.
       - EJB, JPA(Hibernate), CDI, JAX-RS(Rest)
       - Maven
       - Wildfly
-      - PostgreSQL
+      - PostgreSQL (App independente de banco relacional, poderia ser outro ;-))
