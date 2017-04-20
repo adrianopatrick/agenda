@@ -1,8 +1,8 @@
-/home/ichigo/workspace/agenda/agenda-ejb/src/main/java/br/unifor/progweb/agenda/ContatosDAO.java
-/home/ichigo/workspace/agenda/agenda-ejb/src/main/java/br/unifor/progweb/agenda/util/Resources.java
-/home/ichigo/workspace/agenda/agenda-ejb/src/main/java/br/unifor/progweb/agenda/data/MemberRepository.java
-/home/ichigo/workspace/agenda/agenda-ejb/src/main/java/br/unifor/progweb/agenda/bo/ContatosBO.java
-/home/ichigo/workspace/agenda/agenda-ejb/src/main/java/br/unifor/progweb/agenda/data/MemberListProducer.java
-/home/ichigo/workspace/agenda/agenda-ejb/src/main/java/br/unifor/progweb/agenda/entitys/Contatos.java
-/home/ichigo/workspace/agenda/agenda-ejb/src/main/java/br/unifor/progweb/agenda/service/MemberRegistration.java
-/home/ichigo/workspace/agenda/agenda-ejb/src/main/java/br/unifor/progweb/agenda/model/Member.java
+/home/ichigo/git/agenda/backend/agenda/agenda-ejb/src/main/java/br/unifor/progweb/agenda/data/MemberListProducer.java
+/home/ichigo/git/agenda/backend/agenda/agenda-ejb/src/main/java/br/unifor/progweb/agenda/bo/ContatosBO.java
+/home/ichigo/git/agenda/backend/agenda/agenda-ejb/src/main/java/br/unifor/progweb/agenda/data/MemberRepository.java
+/home/ichigo/git/agenda/backend/agenda/agenda-ejb/src/main/java/br/unifor/progweb/agenda/service/MemberRegistration.java
+/home/ichigo/git/agenda/backend/agenda/agenda-ejb/src/main/java/br/unifor/progweb/agenda/entitys/Contatos.java
+/home/ichigo/git/agenda/backend/agenda/agenda-ejb/src/main/java/br/unifor/progweb/agenda/model/Member.java
+/home/ichigo/git/agenda/backend/agenda/agenda-ejb/src/main/java/br/unifor/progweb/agenda/dao/ContatosDAO.java
+/home/ichigo/git/agenda/backend/agenda/agenda-ejb/src/main/java/br/unifor/progweb/agenda/util/Resources.java

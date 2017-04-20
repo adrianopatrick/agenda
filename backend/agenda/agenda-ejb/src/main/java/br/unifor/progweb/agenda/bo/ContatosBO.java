@@ -5,7 +5,7 @@ import java.util.List;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
 
-import br.unifor.progweb.agenda.ContatosDAO;
+import br.unifor.progweb.agenda.dao.ContatosDAO;
 import br.unifor.progweb.agenda.entitys.Contatos;
 
 @Stateless

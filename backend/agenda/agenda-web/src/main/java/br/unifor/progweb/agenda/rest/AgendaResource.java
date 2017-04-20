@@ -1,9 +1,11 @@
 package br.unifor.progweb.agenda.rest;
 
+import java.util.Comparator;
 import java.util.List;
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
+import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -25,61 +27,83 @@ public class AgendaResource {
 
 	@Inject
 	private ContatosBO contatoBO;
-	
+
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public Response listarContatos(){
+	public Response listarContatos() {
 		List<Contatos> contatos = contatoBO.lerAgenda();
-		if(contatos == null) {
-			throw new WebApplicationException(Status.NOT_FOUND);
+		if (contatos == null || contatos.isEmpty()) {
+			return Response.status(Status.NOT_FOUND).build();
 		}
+		contatos.sort(new Comparator<Contatos>() {
+			@Override
+			public int compare(Contatos o1, Contatos o2) {
+				return o1.getNome().compareTo(o2.getNome());
+			}
+		});
 		return Response.ok(contatos).build();
 	}
-	
+
 	@GET
 	@Path("/contato/{id}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public Response buscarContato(@PathParam("id") Long id){
-		Contatos contatos = contatoBO.buscarPorId(id);
-		if(contatos == null) {
+	public Response buscarContato(@PathParam("id") Long id) {
+		Contatos contato = contatoBO.buscarPorId(id);
+		if (contato == null) {
 			throw new WebApplicationException(Status.NOT_FOUND);
 		}
-		return Response.ok(contatos).build();
+		return Response.ok(contato).build();
 	}
-	
+
 	@POST
 	@Path("/contato/{nome}/{telefone}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public Response criarContato(@PathParam("nome") String nome, @PathParam("telefone") String telefone){
+	public Response novoContato(@PathParam("nome") String nome, @PathParam("telefone") String telefone) {
 		Contatos contato = new Contatos();
 		contato.setNome(nome);
 		contato.setTelefone(telefone);
 		contatoBO.inserirNovoContato(contato);
 		return Response.ok().build();
 	}
-	
+
 	@PUT
 	@Path("/contato/{id}/{nome}/{telefone}")
-	@Produces(MediaType.APPLICATION_JSON)
-	public Response atualizarContato(@PathParam("id") Long id, @PathParam("nome") String nome, @PathParam("telefone") String telefone){
-		
+	public Response atualizarContato(@PathParam("id") Long id, @PathParam("nome") String nome,
+			@PathParam("telefone") String telefone) {
+
 		Contatos contato = contatoBO.buscarPorId(id);
 		contato.setNome(nome);
 		contato.setTelefone(telefone);
 		contatoBO.atualizarContato(contato);
+
 		return Response.ok().build();
 	}
-	
+
+	@PUT
+	@Path("/contato/{id}")
+	@Consumes(MediaType.APPLICATION_JSON)
+	public Response atualizarContato(@PathParam("id") Long id, Contatos contato) {
+		Contatos contatoExistente = contatoBO.buscarPorId(id);
+		if (contatoExistente == null) {
+			throw new WebApplicationException(Status.NOT_MODIFIED);
+		}
+		contatoExistente.setNome(contato.getNome());
+		contatoExistente.setTelefone(contato.getTelefone());
+		contatoBO.atualizarContato(contatoExistente);
+		return Response.ok().build();
+	}
+
 	@DELETE
 	@Path("/contato/{id}")
-	@Produces(MediaType.APPLICATION_JSON)
-	public Response deletarContato(@PathParam("id") Long id){
+	public Response deletarContato(@PathParam("id") Long id) {
+
 		Contatos contato = contatoBO.buscarPorId(id);
-		if(contato == null) {
-			throw new WebApplicationException(Status.NOT_FOUND);
+		if (contato == null) {
+			throw new WebApplicationException(Status.NOT_MODIFIED);
 		}
 		contatoBO.removerContato(contato);
+
 		return Response.ok().build();
 	}
-	
+
 }

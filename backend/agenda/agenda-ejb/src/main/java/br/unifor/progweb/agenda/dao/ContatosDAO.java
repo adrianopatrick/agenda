@@ -1,4 +1,4 @@
-package br.unifor.progweb.agenda;
+package br.unifor.progweb.agenda.dao;
 
 import java.util.List;
 
