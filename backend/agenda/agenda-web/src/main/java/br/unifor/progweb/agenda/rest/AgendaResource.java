@@ -1,6 +1,5 @@
 package br.unifor.progweb.agenda.rest;
 
-import java.util.Comparator;
 import java.util.List;
 
 import javax.enterprise.context.RequestScoped;
@@ -35,12 +34,8 @@ public class AgendaResource {
 		if (contatos == null || contatos.isEmpty()) {
 			return Response.status(Status.NOT_FOUND).build();
 		}
-		contatos.sort(new Comparator<Contatos>() {
-			@Override
-			public int compare(Contatos o1, Contatos o2) {
-				return o1.getNome().compareTo(o2.getNome());
-			}
-		});
+		contatos.sort((Contatos o1, Contatos o2) -> o1.getNome().compareTo(o2.getNome()));
+
 		return Response.ok(contatos).build();
 	}
 
@@ -50,7 +45,7 @@ public class AgendaResource {
 	public Response buscarContato(@PathParam("id") Long id) {
 		Contatos contato = contatoBO.buscarPorId(id);
 		if (contato == null) {
-			throw new WebApplicationException(Status.NOT_FOUND);
+			return Response.status(Status.NOT_FOUND).build();
 		}
 		return Response.ok(contato).build();
 	}

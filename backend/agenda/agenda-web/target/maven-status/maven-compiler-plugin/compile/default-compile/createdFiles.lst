@@ -1,7 +1,6 @@
+br/unifor/progweb/agenda/util/WebResources.class
 br/unifor/progweb/agenda/controller/MemberController.class
 br/unifor/progweb/agenda/rest/AgendaResource.class
 br/unifor/progweb/agenda/rest/MemberResourceRESTService.class
-br/unifor/progweb/agenda/rest/AgendaResource$1.class
-br/unifor/progweb/agenda/util/WebResources.class
 br/unifor/progweb/agenda/rest/RESTCorsRequestFilter.class
 br/unifor/progweb/agenda/rest/JaxRsActivator.class

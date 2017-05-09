@@ -1,0 +1,97 @@
+.tela-contatos {
+    color: #ffffff;
+    position: fixed;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    height: 90px;
+    z-index: 1;
+    background-color: white;
+}
+
+.title {
+    background-color: #23475F;
+    height: 50px;
+}
+
+.title-texto {
+    margin-left: 10px;
+    padding-top: 15px;
+    font-size: 20px;
+}
+
+.search {
+    margin: 5px;
+}
+
+.empty {
+    font-family: FontAwesome;
+    padding-left: 10px;
+    width: 100%;
+    height: 30px;
+    font-size: small;
+}
+
+.line-separator {
+    border-bottom: 1px solid #EAF0F2;
+}
+
+.cards{
+    margin-top: 100px;
+}
+
+.card{
+    display: flex;
+    padding: 0px 0px 5px 0px;
+    margin: 10px 0 10px 0;
+    font-size: 1.1em;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.avatar-circle{
+    width: 40px;
+    height: 40px;
+    background-color: #CBECFB;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.initials {
+    position: relative;
+    font-size: 20px;
+    line-height: 40px;
+    color: #ffffff;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+}
+
+.item{
+    margin: 10px 0 0 10px;
+}
+
+.texto {
+    color: #44707B;
+    font-size: 0.75em;
+}
+
+.button-circle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #23475F;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.38);
+}
+
+.icon-circle {
+    position: relative;
+    color: #ffffff;
+    line-height: 42px;
+    left: 2px;
+    font-size: 20px;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+}
