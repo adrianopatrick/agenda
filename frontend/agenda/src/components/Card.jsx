@@ -6,8 +6,8 @@ class Card extends React.Component {
     render(){
         return (
             <a className="card">
-                <Avatar/>
-                <Item />
+                <Avatar value={this.props.contato.nome}/>
+                <Item value={this.props.contato.nome}/>
             </a>
         );
     }

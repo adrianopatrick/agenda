@@ -2,7 +2,7 @@ import React from 'react';
 
 const Item = (props) => (
     <div className="item">
-        <div className="texto">Nome Completo</div>
+        <div className="texto">{props.value}</div>
     </div>
 );
 

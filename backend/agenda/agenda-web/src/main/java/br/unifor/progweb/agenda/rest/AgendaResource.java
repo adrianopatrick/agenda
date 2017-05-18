@@ -32,7 +32,7 @@ public class AgendaResource {
 	public Response listarContatos() {
 		List<Contatos> contatos = contatoBO.lerAgenda();
 		if (contatos == null || contatos.isEmpty()) {
-			return Response.status(Status.NOT_FOUND).build();
+			return Response.status(Status.NO_CONTENT).build();
 		}
 		contatos.sort((Contatos o1, Contatos o2) -> o1.getNome().compareTo(o2.getNome()));
 
@@ -45,7 +45,7 @@ public class AgendaResource {
 	public Response buscarContato(@PathParam("id") Long id) {
 		Contatos contato = contatoBO.buscarPorId(id);
 		if (contato == null) {
-			return Response.status(Status.NOT_FOUND).build();
+			return Response.status(Status.NO_CONTENT).build();
 		}
 		return Response.ok(contato).build();
 	}

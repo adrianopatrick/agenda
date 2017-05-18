@@ -1,8 +1,8 @@
-br/unifor/progweb/agenda/util/Resources.class
 br/unifor/progweb/agenda/model/Member.class
+br/unifor/progweb/agenda/util/Resources.class
 br/unifor/progweb/agenda/entitys/Contatos.class
 br/unifor/progweb/agenda/bo/ContatosBO.class
 br/unifor/progweb/agenda/dao/ContatosDAO.class
 br/unifor/progweb/agenda/data/MemberListProducer.class
-br/unifor/progweb/agenda/service/MemberRegistration.class
 br/unifor/progweb/agenda/data/MemberRepository.class
+br/unifor/progweb/agenda/service/MemberRegistration.class

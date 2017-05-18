@@ -1,6 +1,6 @@
-/home/ichigo/git/agenda/backend/agenda/agenda-web/src/main/java/br/unifor/progweb/agenda/rest/AgendaResource.java
-/home/ichigo/git/agenda/backend/agenda/agenda-web/src/main/java/br/unifor/progweb/agenda/rest/RESTCorsRequestFilter.java
-/home/ichigo/git/agenda/backend/agenda/agenda-web/src/main/java/br/unifor/progweb/agenda/rest/JaxRsActivator.java
-/home/ichigo/git/agenda/backend/agenda/agenda-web/src/main/java/br/unifor/progweb/agenda/controller/MemberController.java
-/home/ichigo/git/agenda/backend/agenda/agenda-web/src/main/java/br/unifor/progweb/agenda/util/WebResources.java
-/home/ichigo/git/agenda/backend/agenda/agenda-web/src/main/java/br/unifor/progweb/agenda/rest/MemberResourceRESTService.java
+/home/unifor/git/agenda/backend/agenda/agenda-web/src/main/java/br/unifor/progweb/agenda/util/WebResources.java
+/home/unifor/git/agenda/backend/agenda/agenda-web/src/main/java/br/unifor/progweb/agenda/rest/MemberResourceRESTService.java
+/home/unifor/git/agenda/backend/agenda/agenda-web/src/main/java/br/unifor/progweb/agenda/controller/MemberController.java
+/home/unifor/git/agenda/backend/agenda/agenda-web/src/main/java/br/unifor/progweb/agenda/rest/RESTCorsRequestFilter.java
+/home/unifor/git/agenda/backend/agenda/agenda-web/src/main/java/br/unifor/progweb/agenda/rest/AgendaResource.java
+/home/unifor/git/agenda/backend/agenda/agenda-web/src/main/java/br/unifor/progweb/agenda/rest/JaxRsActivator.java

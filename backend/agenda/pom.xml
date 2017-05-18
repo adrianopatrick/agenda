@@ -131,8 +131,8 @@
                     <configuration>
                     	<hostname>localhost</hostname>
                     	<port>9990</port>
-                    	<username>root</username>
-                    	<password>root</password>
+                    	<username>unifor</username>
+                    	<password>unifor</password>
                         <skip>true</skip>
                     </configuration>
                 </plugin>

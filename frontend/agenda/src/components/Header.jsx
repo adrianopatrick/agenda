@@ -11,7 +11,7 @@ const Header = (props) => (
             </div>
         </div>
 
-       <Search/>
+       <Search filtro={props.filtro} change={props.change}/>
 
         <div className="line-separator" />
     </div>
